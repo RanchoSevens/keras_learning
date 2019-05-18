@@ -16,4 +16,5 @@ data = np.random.random((1000, 100))
 labels = np.random.randint(2, size=(1000, 1))
 
 # train the model,iterating on the data in batches of 32 samples
-model.fit(data, labels, nb_epoch=10, batch_size=32)
+model.fit(data, labels, nb_epoch=150, batch_size=32)
+# 根据epoch的不同，可以得到不同的准确率， 理论情况下可以学习到所有特征实现100的acc
