@@ -1,3 +1,4 @@
 #-*-coding:utf-8-*-
 
-print("hello keras")
+if __name__ == "__main__":
+    print("hello keras")
