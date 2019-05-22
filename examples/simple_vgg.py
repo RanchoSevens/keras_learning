@@ -41,8 +41,8 @@ model.add(Dropout(0.5))
 model.add(Dense(10, activation='softmax'))  # 十个类别，所以最后一层是10
 
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy', optimizer=sgd,  metrics=['accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-model.fit(x_train, y_train, batch_size=32, epochs=100, validation=0.1,verbose=1)
-score = model.evaluate(x_test, y_test, batch_size=32)
+model.fit(x_train, y_train, batch_size=32, epochs=100, verbose=1)
+score = model.evaluate(x_test, y_test, batch_size=32, verbose=1)
 print(score)
